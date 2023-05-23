@@ -27,11 +27,9 @@ export default async function SignIn(
         })
       );
 
-      res.status(201);
-      res.end();
+      res.status(201).send({})
     } else {
-      res.status(402);
-      res.end();
+      res.status(402).send({});
     }
   }
 }

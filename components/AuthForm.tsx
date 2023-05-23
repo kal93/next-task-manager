@@ -9,7 +9,7 @@ import { register, signIn } from "@tm/lib/api";
 import Link from "next/link";
 
 const registerContent = {
-  linkUrl: "/signin",
+  linkUrl: "/signIn",
   linkText: "Already have an account?",
   header: "Create new account",
   subheader: "Just a few things to get started",
