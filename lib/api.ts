@@ -1,7 +1,7 @@
 const fetcher = async ({ url, method, body, json = true }) => {
   const res = await fetch(url, {
     method,
-    body: (body ? JSON.stringify(body) : ''),
+    body: body ? JSON.stringify(body) : "",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -22,7 +22,14 @@ export const register = (user) => {
   return fetcher({ url: "/api/register", method: "post", body: user });
 };
 
-
 export const signIn = (user) => {
-    return fetcher({ url: "/api/signIn", method: "post", body: user });
-  };
+  return fetcher({ url: "/api/signIn", method: "post", body: user });
+};
+
+export const createNewProject = (name) => {
+  return fetcher({
+    url: "/api/project",
+    method: "POST",
+    body: { name },
+  });
+};

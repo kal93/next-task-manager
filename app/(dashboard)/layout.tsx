@@ -13,6 +13,8 @@ export default function DashboardRootLayout({ children }) {
 
           {children}
         </GlassPane>
+        {/* Modal placeholder/portal div for modal to be attached */}
+        <div id="modal"></div>
       </body>
     </html>
   );

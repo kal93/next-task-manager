@@ -1,5 +1,6 @@
 import Greetings from "@tm/components/Greetings";
 import GreetingsSkeleton from "@tm/components/GreetingsSkeleton";
+import NewProject from "@tm/components/NewProject";
 import ProjectCard from "@tm/components/ProjectCard";
 import TaskCard from "@tm/components/TaskCard";
 import { delay } from "@tm/lib/async";
@@ -43,7 +44,9 @@ export default async function Page() {
               </Link>
             </div>
           ))}
-          <div className="w-1/3 p-3">{/* new project here */}</div>
+          <div className="w-1/3 p-3">{/* new project here */}
+          <NewProject />
+          </div>
         </div>
         <div className="mt-6 flex-2 grow w-full flex">
           <div className="w-full">{/* tasks here */}
