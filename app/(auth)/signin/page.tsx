@@ -1,5 +1,9 @@
+import AuthForm from "@tm/components/AuthForm";
+
 export default function SignIn() {
-    return<>
-        SignIn
+  return (
+    <>
+      <AuthForm mode="signIn"></AuthForm>
     </>
+  );
 }
