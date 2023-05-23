@@ -16,19 +16,20 @@ export default async function register(
         lastName: req.body.lastName,
       },
     });
-
+    console.log(user, '<<<');
     const jwt = await createJWT(user);
+
+    res.setHeader(
+      "Set-Cookie",
+      serialize(process.env.COOKIE_NAME, jwt, {
+        httpOnly: true,
+        path: "/",
+        maxAge: 60 * 60 * 24 * 7,
+      })
+    );
+      console.log(jwt);
+    res.status(201).send({});
+  } else {
+    res.status(402).send({});
   }
-
-  res.setHeader(
-    "Set-Cookie",
-    serialize(process.env.COOKIE_NAME, jwt, {
-      httpOnly: true,
-      path: "/",
-      maxAge: 60 * 60 * 24 * 7,
-    })
-  );
-
-  res.status(201);
-  res.end();
 }
