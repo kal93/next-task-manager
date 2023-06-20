@@ -49,7 +49,7 @@ export default async function Page() {
           </div>
         </div>
         <div className="mt-6 flex-2 grow w-full flex">
-          <div className="w-full">{/* tasks here */}
+          <div className="w-full pb-5">{/* tasks here */}
             <TaskCard />
           </div>
         </div>
