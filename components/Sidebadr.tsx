@@ -20,7 +20,8 @@ const links = [
 
 const Sidebar = () => {
   return (
-    <Card className="h-full w-40 flex items-center justify-between flex-wrap">
+    <div className="h-full p-5">
+    <Card className="h-full w-32 flex items-center justify-between flex-wrap">
       {/* <div className="w-full flex justify-center items-center">
         <Image src={logo} alt="Able logo" priority className="w-14" />
       </div> */}
@@ -28,6 +29,7 @@ const Sidebar = () => {
         <SidebarLink key={link.label} link={link} />
       ))}
     </Card>
+    </div>
   );
 };
 

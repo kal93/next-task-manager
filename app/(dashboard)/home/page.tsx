@@ -28,7 +28,7 @@ const getData = async () => {
 export default async function Page() {
   const { projects } = await getData();
   return (
-    <div className="h-full overflow-y-auto pr-6 w-full">
+    <div className="h-full overflow-y-auto p-5 w-full">
       <div className=" h-full  items-stretch justify-center min-h-[content]">
         <div className="flex-1 grow flex">
           <Suspense fallback={<GreetingsSkeleton />}>

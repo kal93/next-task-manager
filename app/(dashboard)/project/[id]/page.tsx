@@ -20,7 +20,7 @@ const getData = async (id) => {
 
 export default async function ProjectPage({ params }) {
     const project = await getData(params.id);
-    return <div>
+    return <div className="pl-5">
         <TaskCard tasks={project?.tasks} title={project?.name}/>
     </div>
 }
